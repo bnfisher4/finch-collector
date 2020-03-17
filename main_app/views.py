@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-from django.http import HttpResponse
 
 class Finch:
   def __init__(self, name, species, description, age):
@@ -17,7 +16,7 @@ finches = [
 
 # Create your views here.
 def home(request):
-    return HttpResponse('<h1>Hello</h1>')
+    return render(request, 'home.html')
 
 def about(request):
     return render(request, 'about.html')
