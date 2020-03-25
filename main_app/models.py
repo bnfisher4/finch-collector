@@ -16,7 +16,7 @@ class Toy(models.Model):
     def __str__(self):
         return self.name
     
-    def get_absolut_url(self):
+    def get_absolute_url(self):
         return reverse('toys_detail', kwargs={'pk': self.id})
 
 class Finch(models.Model):
@@ -24,6 +24,7 @@ class Finch(models.Model):
     species = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     age = models.IntegerField()
+    toys = models.ManyToManyField(Toy)
 
     def __str__(self):
         return self.name
