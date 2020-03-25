@@ -8,10 +8,11 @@
     <div class="card">
         <div class="card-content">
             <span class="card-title #ff6f00 amber-text text-darken-4">{{ toy.name }}</span>
-            <p class="#ff6f00 amber-text text-darken-4">Color: {{ toy.color }}</p>
+            <p style="color: {{ toy.color }}">{{ toy.color }}</p>
         </div>
     </div>
   </a>
 {% endfor %}
 
 {% endblock %}
+<span style="color: {{ toy.color }}">{{ toy.color }}</span>

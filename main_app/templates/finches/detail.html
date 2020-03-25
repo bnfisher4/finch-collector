@@ -26,7 +26,7 @@
       <form action="{% url 'add_feeding' finch.id %}" method="post">
         {% csrf_token %}
         {{ feeding_form.as_p }}
-        <input type="submit" class="btn" value="Add Feeding">
+        <input type="submit" class="btn #42a5f5 blue lighten-1" value="Add Feeding">
       </form>
     <table class="striped">
       <thead>
@@ -60,7 +60,7 @@
           <div class="card-action">
             <form action="{% url 'unassoc_toy' finch.id toy.id %}" method="post">
                 {% csrf_token %}
-              <button type="submit" class="btn">Remove</button>
+              <button type="submit" class="btn #d84315 deep-orange darken-3">Remove</button>
             </form>
           </div>
         </div>
@@ -83,7 +83,7 @@
           <div class="card-action">
             <form action="{% url 'assoc_toy' finch.id toy.id %}" method="post">
               {% csrf_token %}
-              <button type="submit" class="btn">Add</button>
+              <button type="submit" class="btn #00c853 green accent-4">Add</button>
             </form>
           </div>
         </div>
