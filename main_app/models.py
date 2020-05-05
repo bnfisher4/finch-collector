@@ -39,7 +39,7 @@ class Photo(models.Model):
     finch = models.ForeignKey(Finch, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"Phote for finch_id: {self.finch_id} @{self.url}"
+        return f"Photo for finch_id: {self.finch_id} @{self.url}"
 
 class Feeding(models.Model):
     date = models.DateField('Feeding date')
